@@ -1,0 +1,103 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+
+#calculator {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+#key {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+.operator {
+    background-color: #ff9500;
+}
+
+.operator:hover {
+    background-color: #e68a00;
+}
+
+button[onclick="clearDisplay()"] {
+    background-color: red;
+}
+
+button[onclick="clearDisplay()"]:hover {
+    background-color: darkred;
+}
+
+button[onclick="del()"] {
+    background-color: yellow;
+    color: black;
+}
+
+button[onclick="del()"]:hover {
+    background-color: #e6e600;
+}
+
+button[onclick="calculate()"] {
+    background-color: #28a745;
+}
+
+button[onclick="calculate()"]:hover {
+    background-color: #218838;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 400px) {
+    #calculator {
+        width: 90%;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #display {
+        font-size: 20px;
+        height: 40px;
+    }
+}
